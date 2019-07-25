@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[test blog]]></title>
     <url>%2F2019%2F07%2F25%2Ftest-blog%2F</url>
-    <content type="text"><![CDATA[搭了一个$new blog$ QWQ]]></content>
+    <content type="text"><![CDATA[搭了一个$new\ blog$ QWQ]]></content>
       <tags>
         <tag>了解</tag>
       </tags>
