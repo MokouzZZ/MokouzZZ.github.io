@@ -14,13 +14,13 @@
     theme: 'hexo-theme-lx-master',
     version: '1.4.5',
     localsearch:{
-      "enable": false,
+      "enable": true,
       "trigger": "auto",
       "top_n_per_article": 1,
       "unescape": false,
       "preload": false
       },
-    path: '-'
+    path: 'search.xml'
   };
 </script>
 
@@ -33,7 +33,7 @@
 	$(".menu-container").jSideMenu({
 	    jSidePosition: "position-right",
 	    jSideSticky: true,
-	    jSideSkin: "endless-river",
+	    jSideSkin: "black",
 	     });
 	}); 
 	</script>
@@ -47,18 +47,22 @@
 <div id="lx-aside" style="background-image: url(https://source.unsplash.com/user/erondu/800x450)" data-stellar-background-ratio="0.5">
   <div class="overlay">
   <div class="page-title">
-    <div class="avatar"><a href="/"><img src="https://imgchr.com/i/evIXbq"></a></div>
+    <div class="avatar"><a href="/"><img src="https://source.unsplash.com/user/erondu/323x323"></a></div>
     <span>2019-07-26</span>
     <h2>2019 SDSC+清北学堂游记</h2>
     <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/见解/">见解</a></div>
-    </div>
+    <div class="social-links">
+<a href="https://github.com/yourname" target="_blank"><i class="fa fa-github fa-fw"></i></a><a href="mailto:your@email.address"><i class="fa fa-envelope fa-fw"></i></a><a href="https://weibo.com/yourname" target="_blank"><i class="fa fa-weibo fa-fw"></i></a>
+</div></div>
 </div>
 </div>
 <div id="lx-main-content">
   <div class="lx-post">
     <div class="lx-entry padding">
       <div>
-        <h3 id="Day-1"><a href="#Day-1" class="headerlink" title="$Day\ -1$"></a>$Day\ -1$</h3><p>  放假是舒服的呀，回家颓颓颓， 和lbh与sts看了银河补习班，海星，打了lol<del>我是真的菜lbh是真的强</del> 。 </p>
+        <blockquote class="blockquote-center"><p>人类的悲欢并不相通，我只觉得他们吵闹。<br><strong>——鲁迅</strong></p>
+</blockquote>
+<h3 id="Day-1"><a href="#Day-1" class="headerlink" title="$Day\ -1$"></a>$Day\ -1$</h3><p>  放假是舒服的呀，回家颓颓颓， 和lbh与sts看了银河补习班，海星，打了lol<del>我是真的菜lbh是真的强</del> 。 </p>
 <h3 id="Day-0"><a href="#Day-0" class="headerlink" title="$Day\ 0$"></a>$Day\ 0$</h3><p>  就是坐车坐车坐车到了日照，然后得知下午自由活动？！然后就三国杀三国杀三国杀，晚上又买了象棋、飞行棋、大富翁…度假石锤。<br>  第一次住女生宿舍感觉好兴奋！<del>好精致啊还有挂墙上的小灯情调满满</del></p>
 <h3 id="Day-1-1"><a href="#Day-1-1" class="headerlink" title="$Day\ 1$"></a>$Day\ 1$</h3><p>  一觉睡到七点钟的感觉好舒服啊，然后就各种洗刷，去食堂吃早饭，竟然有点丰盛，旁边还有煎饼果子、手抓饼  </p>
 <h4 id><a href="#" class="headerlink" title="?  !"></a>?  !</h4><p>  有点幸福啊    </p>
@@ -110,7 +114,7 @@
   </div>
 </div>
 <div class="lx-navigation">
-	<div class="lx-cover prev lx-cover-sm" style="background-image: url(https://source.unsplash.com/user/erondu/500x270)">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(https://source.unsplash.com/500x270/?book,library)">
 		<div class="overlay"></div>
 		<a class="copy" href="#">
 			<div class="display-t">
@@ -138,12 +142,27 @@
 	</div>
 </div>
 </div>
-
+<div class="comment"><div id="comments"></div></div>
 <footer>
   <div>
   Copyright &copy; 2019.<a href="/">Life is Going on</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.blleng.cn" target="_blank">Lx</a><br>
   </div>
 </footer>
+</div>
+<a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i></a>
+<div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Search..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
 </div>
 
 <button class="menu-trigger"></button>
@@ -153,12 +172,12 @@
       <div class="col">
         <div class="row for-pic">
           <div class="profile-pic">
-            <a href="/"><img src="https://imgchr.com/i/evIXbq" alt="Cherubicy"></a>
+            <a href="/"><img src="https://source.unsplash.com/user/erondu/323x323" alt="Cherubicy"></a>
           </div>
         </div>
         <div class="row for-name">
           <p>Cherubicy</p>
-          <span class="tagline">sadasdasdad</span>
+          <span class="tagline">If I win you keep me with you for life</span>
         </div>
       </div>
     </span>
@@ -170,14 +189,18 @@
     <li class="has-sub"><span class="dropdown-heading">
       <i class="fa fa-bookmark fa-fw"></i>页面</span>
         <ul>
-          <li><a href="/guestbook">留言</a></li>
-        <li><a href="/about">关于</a></li>
+          <li><a href="/about">关于</a></li>
         </ul>
     </li>
     <li class="has-sub"><span class="dropdown-heading">
       <i class="fa fa-link fa-fw"></i>友链</span>
         <ul>
-          <li> <a href="https://lx.blleng.cn" target="_blank">Theme-Lx</a></li>
+          <li> <a href="https://www.luogu.org/blog/koishikoishi/" target="_blank">灵乌路空 Gyh</a></li>
+        <li> <a href="https://cnblogs.com/handsomegodzilla/" target="_blank">Godzila swj</a></li>
+        <li> <a href="https://www.cnblogs.com/poi-bolg-poi/" target="_blank">yu_xuan lzx</a></li>
+        <li> <a href="https://www.cnblogs.com/Soroak/" target="_blank">Soroak sts</a></li>
+        <li> <a href="https://www.cnblogs.com/Xchu/" target="_blank">X_chu lbh</a></li>
+        <li> <a href="https://www.cnblogs.com/skkyk/" target="_blank">skkyk zkx</a></li>
         </ul>
     </li>
   </ul>
@@ -191,7 +214,57 @@
 <script src="/js/jquery.waypoints.min.js"></script>
 <script src="/js/jquery.stellar.min.js"></script>
 <script src="/js/main.js"></script>
+<script src="/js/local.search.js"></script>
+<script src="//unpkg.com/valine"></script>
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: '此处留言',
+    avatar: 'identicon',
+    meta: guest,
+    pageSize: '10' || 10,
+    lang: 'zh-cn' || 'zh-cn'
+  });
+</script>
 
-
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+  TeX: {
+          extensions: ["mhchem.js"]
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.bootcss.com/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG"></script>
 </body>
 </html>

@@ -14,13 +14,13 @@
     theme: 'hexo-theme-lx-master',
     version: '1.4.5',
     localsearch:{
-      "enable": false,
+      "enable": true,
       "trigger": "auto",
       "top_n_per_article": 1,
       "unescape": false,
       "preload": false
       },
-    path: '-'
+    path: 'search.xml'
   };
 </script>
 
@@ -33,7 +33,7 @@
 	$(".menu-container").jSideMenu({
 	    jSidePosition: "position-right",
 	    jSideSticky: true,
-	    jSideSkin: "endless-river",
+	    jSideSkin: "black",
 	     });
 	}); 
 	</script>
@@ -43,14 +43,16 @@
 </head>
 <body>
 <div id="page">
-<div id="lx-aside" style="background-image: url(https://imgchr.com/i/evfz1s)">
+<div id="lx-aside" style="background-image: url(https://source.unsplash.com/user/erondu/600x850)">
   <div class="overlay">
   <div class="featured">
-    <div class="avatar"><a href="/"><img src="https://imgchr.com/i/evIXbq"></a></div>
+    <div class="avatar"><a href="/"><img src="https://source.unsplash.com/user/erondu/323x323"></a></div>
     <span>Cherubicy</span>
     <h2>Life is Going on</h2>
     <span>——林深时见鹿，溪午不闻钟</span>
-    
+    <div class="social-links">
+<a href="https://github.com/yourname" target="_blank"><i class="fa fa-github fa-fw"></i></a><a href="mailto:your@email.address"><i class="fa fa-envelope fa-fw"></i></a><a href="https://weibo.com/yourname" target="_blank"><i class="fa fa-weibo fa-fw"></i></a>
+</div>
   </div>
   </div>
 </div>
@@ -75,6 +77,21 @@
   </div>
 </div>
 </div>
+<a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i></a>
+<div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Search..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
 
 <button class="menu-trigger"></button>
 <div class="menu">
@@ -83,12 +100,12 @@
       <div class="col">
         <div class="row for-pic">
           <div class="profile-pic">
-            <a href="/"><img src="https://imgchr.com/i/evIXbq" alt="Cherubicy"></a>
+            <a href="/"><img src="https://source.unsplash.com/user/erondu/323x323" alt="Cherubicy"></a>
           </div>
         </div>
         <div class="row for-name">
           <p>Cherubicy</p>
-          <span class="tagline">sadasdasdad</span>
+          <span class="tagline">If I win you keep me with you for life</span>
         </div>
       </div>
     </span>
@@ -100,14 +117,18 @@
     <li class="has-sub"><span class="dropdown-heading">
       <i class="fa fa-bookmark fa-fw"></i>页面</span>
         <ul>
-          <li><a href="/guestbook">留言</a></li>
-        <li><a href="/about">关于</a></li>
+          <li><a href="/about">关于</a></li>
         </ul>
     </li>
     <li class="has-sub"><span class="dropdown-heading">
       <i class="fa fa-link fa-fw"></i>友链</span>
         <ul>
-          <li> <a href="https://lx.blleng.cn" target="_blank">Theme-Lx</a></li>
+          <li> <a href="https://www.luogu.org/blog/koishikoishi/" target="_blank">灵乌路空 Gyh</a></li>
+        <li> <a href="https://cnblogs.com/handsomegodzilla/" target="_blank">Godzila swj</a></li>
+        <li> <a href="https://www.cnblogs.com/poi-bolg-poi/" target="_blank">yu_xuan lzx</a></li>
+        <li> <a href="https://www.cnblogs.com/Soroak/" target="_blank">Soroak sts</a></li>
+        <li> <a href="https://www.cnblogs.com/Xchu/" target="_blank">X_chu lbh</a></li>
+        <li> <a href="https://www.cnblogs.com/skkyk/" target="_blank">skkyk zkx</a></li>
         </ul>
     </li>
   </ul>
@@ -121,6 +142,7 @@
 <script src="/js/jquery.waypoints.min.js"></script>
 <script src="/js/jquery.stellar.min.js"></script>
 <script src="/js/main.js"></script>
+<script src="/js/local.search.js"></script>
 
 
 </body>
